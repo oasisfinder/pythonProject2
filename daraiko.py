@@ -28,9 +28,9 @@ for i, rows in enumerate(rows):
 
 with open('daraiko.csv', 'w',newline='') as f:
    write = csv.writer(f)
-   write.writerow(date_3.text)
-   write.writerow(value_3.text)
+   write.writerow(dlist)
+   write.writerow(vlist)
 f.close()
 
-driver.Close()
-driver.Quit()
+driver.close()
+driver.quit()
