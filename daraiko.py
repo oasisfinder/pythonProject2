@@ -21,12 +21,16 @@ for i, rows in enumerate(rows):
     value = rows.find_elements_by_tag_name("td")[9]
     datek = date.text.replace("月","/")
     datek = datek.replace("日","")
+
     dlist.append(datek)
     vlist.append(value.text)
 
 
 with open('daraiko.csv', 'w',newline='') as f:
-    write = csv.writer(f)
-    write.writerow(dlist)
-    write.writerow(vlist)
+   write = csv.writer(f)
+   write.writerow(date_3.text)
+   write.writerow(value_3.text)
 f.close()
+
+driver.Close()
+driver.Quit()
