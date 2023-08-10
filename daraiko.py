@@ -1,7 +1,6 @@
 from selenium import webdriver
 import datetime
 import csv
-
 driver = webdriver.Chrome()
 url = "http://www.shouei-shouten.com/14537920252370"
 driver.get(url)
